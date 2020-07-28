@@ -7,9 +7,13 @@ from matplotlib import pyplot as plt
 from scipy import io as spio
 
 '''异常检测主运行程序'''
+
+
 def anomalyDetection_example():
+
     '''加载并显示数据'''
     data = spio.loadmat('data1.mat')
+    print('data:', data)
     X = data['X']
     plt = display_2d_data(X, 'bx')
     plt.title("origin data")
